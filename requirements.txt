@@ -1,0 +1,13 @@
+bottle==0.13.4
+et_xmlfile==2.0.0
+openpyxl==3.1.5
+proxy_tools==0.1.0
+pyobjc-core==12.2.1
+pyobjc-framework-Cocoa==12.2.1
+pyobjc-framework-Quartz==12.2.1
+pyobjc-framework-Security==12.2.1
+pyobjc-framework-UniformTypeIdentifiers==12.2.1
+pyobjc-framework-WebKit==12.2.1
+pysimplegui==6.2
+pywebview==6.2.1
+typing_extensions==4.16.0
