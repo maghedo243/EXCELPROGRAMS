@@ -14,7 +14,7 @@ def getNextRow(sheet):
     return -1
 
 def setInfoText(sheet,currentRow):
-    return f'''Name: {sheet.cell(currentRow,3).value}, Age: {int(sheet.cell(currentRow,4).value)}\n\nDiscord?: {sheet.cell(currentRow,6).value}, Other Socials: {sheet.cell(currentRow,7).value}\n\nLink to Portfolio: {sheet.cell(currentRow,8).value}\nSpecialty?: {sheet.cell(currentRow,9).value}\n\nOther Skills?: {sheet.cell(currentRow,10).value}\n\nPreferred Positions?: {sheet.cell(currentRow,11).value}\n\nAny Questions?: {sheet.cell(currentRow,12).value}'''
+    return f'''Applicant Number: {currentRow}\nName: {sheet.cell(currentRow,3).value}, Age: {int(sheet.cell(currentRow,4).value)}\n\nDiscord?: {sheet.cell(currentRow,6).value}, Other Socials: {sheet.cell(currentRow,7).value}\n\nLink to Portfolio: {sheet.cell(currentRow,8).value}\nSpecialty?: {sheet.cell(currentRow,9).value}\n\nOther Skills?: {sheet.cell(currentRow,10).value}\n\nPreferred Positions?: {sheet.cell(currentRow,11).value}\n\nAny Questions?: {sheet.cell(currentRow,12).value}'''
 
 def launchLink(url):
     webview.create_window("Portfolio Link",url)
@@ -54,6 +54,7 @@ def main():
                 else:
                     continue
                 sheet.cell(currentRow,2).fill = PatternFill(patternType="solid", fgColor=color)
+                print(color)
 
                 currentRow = getNextRow(sheet)
                 window["text"].update(setInfoText(sheet,currentRow))
