@@ -17,7 +17,7 @@ def setInfoText(sheet,currentRow):
     return f'''Applicant Number: {currentRow}\nName: {sheet.cell(currentRow,3).value}, Age: {int(sheet.cell(currentRow,4).value)}\n\nDiscord?: {sheet.cell(currentRow,6).value}, Other Socials: {sheet.cell(currentRow,7).value}\n\nLink to Portfolio: {sheet.cell(currentRow,8).value}\nSpecialty?: {sheet.cell(currentRow,9).value}\n\nOther Skills?: {sheet.cell(currentRow,10).value}\n\nPreferred Positions?: {sheet.cell(currentRow,11).value}\n\nAny Questions?: {sheet.cell(currentRow,12).value}'''
 
 def launchLink(url):
-    webview.create_window("Portfolio Link",url)
+    webview.create_window("Portfolio Link",url,width=1200,height=900,screen=webview.screens[1])
     chrome_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     session_folder = './webview_session_data'
     webview.start(private_mode=False, storage_path=session_folder, user_agent=chrome_agent)
